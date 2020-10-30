@@ -43,6 +43,11 @@
     <eclipse.p2.latest>http://download.eclipse.org/releases/2020-06/</eclipse.p2.latest>
 
     <p2repo.archive.skip>false</p2repo.archive.skip>
+    <!-- SonarQube Settings -->
+  	<sonar.projectKey>marmyshev_dt-example-plugins</sonar.projectKey>
+  	<sonar.organization>marmyshev</sonar.organization>
+  	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  	<sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
   </properties>
 
   <build>
@@ -302,5 +307,30 @@
   	    </plugins>
   	  </build>
   	</profile>
+  	<profile>
+	  <id>sign</id>
+	    <activation>
+		  <property>
+			<name>jarsigner.alias</name>
+		  </property>
+	    </activation>
+	    <build>
+		  <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jarsigner-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>sign</id>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		  </plugins>
+	   </build>
+    </profile>
   </profiles>
 </project>
