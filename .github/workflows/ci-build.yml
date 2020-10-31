@@ -66,7 +66,13 @@ jobs:
       with:
         name: sdk-repo
         path: simple-plugin/repositories/org.example.repository.sdk/target/org.example.repository.sdk.zip
-        
+    
+    - name: Upload JaCoCo exec data
+      uses: actions/upload-artifact@v2
+      with:
+        name: jacoco-exec
+        path: simple-plugin/target/jacoco.exec
+    
     - name: Upload test logs on failure
       uses: actions/upload-artifact@v2
       if: failure()
