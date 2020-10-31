@@ -48,7 +48,7 @@
   	<sonar.organization>marmyshev</sonar.organization>
   	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
   	<sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
-  	<sonar.jacoco.reportPath>${session.executionRootDirectory}/target/jacoco.exec</sonar.jacoco.reportPath>
+  	<sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml,target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
   	<!-- JaCoCo code coverage -->
   	<org.jacoco.version>0.8.6</org.jacoco.version>
   </properties>
@@ -227,8 +227,6 @@
 			<artifactId>jacoco-maven-plugin</artifactId>
 			<version>${org.jacoco.version}</version>
 			<configuration>
-				<destFile>${sonar.jacoco.reportPath}</destFile>
-				<append>true</append>
 				<excludes>
 					<exclude>**/MdClassPackageImpl*</exclude>
 				</excludes>
