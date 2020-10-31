@@ -59,19 +59,22 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: repo
-        path: simple-plugin/repositories/org.example.repository/target/org.example.repository.zip
+        path: simple-plugin/repositories/org.example.repository/target/repository/
         
     - name: Upload SDK repo
       uses: actions/upload-artifact@v2
       with:
         name: sdk-repo
-        path: simple-plugin/repositories/org.example.repository.sdk/target/org.example.repository.sdk.zip
+        path: simple-plugin/repositories/org.example.repository.sdk/target/repository/
     
     - name: Upload JaCoCo exec data
       uses: actions/upload-artifact@v2
+      if: always()
       with:
-        name: jacoco-exec
-        path: simple-plugin/target/jacoco.exec
+        name: jacoco
+        path: |
+          simple-plugin/**/target/jacoco.exec
+          simple-plugin/**/target/site/jacoco*/
     
     - name: Upload test logs on failure
       uses: actions/upload-artifact@v2
