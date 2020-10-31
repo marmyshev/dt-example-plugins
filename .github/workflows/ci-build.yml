@@ -55,17 +55,17 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
     
-    - name: Upload zip repos
+    - name: Upload repo
       uses: actions/upload-artifact@v2
       with:
-        name: zip-repos
-        path: simple-plugin/repositories/**/target/*.zip
+        name: repo
+        path: simple-plugin/repositories/org.example.repository/target/org.example.repository.zip
         
-    - name: Upload repos
+    - name: Upload SDK repo
       uses: actions/upload-artifact@v2
       with:
-        name: repos
-        path: simple-plugin/repositories/**/target/repository/
+        name: sdk-repo
+        path: simple-plugin/repositories/org.example.repository.sdk/target/org.example.repository.sdk.zip
         
     - name: Upload test logs on failure
       uses: actions/upload-artifact@v2
