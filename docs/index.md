@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+# Пример реализации плагина для "1C: Enterprise Development Tools".
 
-You can use the [editor on GitHub](https://github.com/marmyshev/dt-example-plugins/edit/gh-pages/docs/index.md) to maintain and preview the content for your website in Markdown files.
+Данный плагин представляет собой плагин, который добавляет в 1C:EDT команду для создания обработчика проведения документа через специальный диалог, а также пример расширения проверок модуля. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Документация
 
-### Markdown
+* [Описание возможностей плагина](documentation/)
+* Руководство по разработке плагинов доступно на сайте [https://edt.1c.ru/dev/ru/](https://edt.1c.ru/dev/ru/)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## [Установка / Скачать / Install / Download](install.md)
 
-```markdown
-Syntax highlighted code block
+[Скачать](install.md) архив P2-репозитория или [установить](install.md)
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/marmyshev/dt-example-plugins/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
