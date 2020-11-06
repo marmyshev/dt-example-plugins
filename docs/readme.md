@@ -7,7 +7,7 @@
 * [Описание возможностей плагина](documentation/)
 * Руководство по разработке плагинов доступно на сайте [https://edt.1c.ru/dev/ru/](https://edt.1c.ru/dev/ru/)
 
-## [Установка / Скачать / Install / Download](install.md)
+## [Установить / Скачать / Install / Download](install.md)
 
 [Скачать](install.md) архив P2-репозитория или [установить](install.md)
 
