@@ -43,7 +43,7 @@ jobs:
         MAVEN_CENTRAL_TOKEN: ${{ secrets.P2_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      working-directory: ./simple-plugin
+      working-directory: ./
       run: |
         Xvfb :5 -screen 0 1280x1024x8 -fbdir /tmp &
         export DISPLAY=:5
@@ -59,13 +59,13 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: repo
-        path: simple-plugin/repositories/org.example.repository/target/repository/
+        path: repositories/org.example.repository/target/repository/
         
     - name: Upload SDK repo
       uses: actions/upload-artifact@v2
       with:
         name: sdk-repo
-        path: simple-plugin/repositories/org.example.repository.sdk/target/repository/
+        path: repositories/org.example.repository.sdk/target/repository/
     
     - name: Upload JaCoCo exec data
       uses: actions/upload-artifact@v2
@@ -73,12 +73,12 @@ jobs:
       with:
         name: jacoco
         path: |
-          simple-plugin/**/target/jacoco.exec
-          simple-plugin/**/target/site/jacoco*/
+          ./**/target/jacoco.exec
+          ./**/target/site/jacoco*/
     
     - name: Upload test logs on failure
       uses: actions/upload-artifact@v2
       if: failure()
       with:
         name: logs
-        path: simple-plugin/**/.log
+        path: ./**/.log
